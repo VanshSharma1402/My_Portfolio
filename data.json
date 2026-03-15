@@ -1,0 +1,79 @@
+{
+  "personal": {
+    "name": "Vansh Sharma",
+    "title": "SOFTWARE ENGINEER",
+    "email": "vanshsharma.14.2005@gmail.com",
+    "phone": "+91-(9310274407)",
+    "linkedin": "linkedin.com/in/developer-vansh-sharma",
+    "github": "github.com/VanshSharma1402"
+  },
+  "summary": "Computer Science undergraduate with strong expertise in Backend Development, AI Integration, and Full-Stack Web Applications. Skilled in building scalable systems using Python, Java, REST APIs, Firebase, and MySQL. Strong foundation in Data Structures, Algorithms, OOP, DBMS, and System Design. Passionate about solving real-world problems through intelligent automation and high-performance applications.",
+  "education": {
+    "degree": "Bachelor of Technology (B.Tech)",
+    "major": "Computer Science Engineering",
+    "years": "2025–2028",
+    "university": "IILM University, Greater Noida",
+    "cgpa": "9.0+"
+  },
+  "skills": [
+    { "title": "Programming", "items": ["C", "Java", "Python", "SQL"], "color": "bg-white" },
+    { "title": "Web Dev", "items": ["HTML5", "CSS3", "JavaScript", "Responsive Design"], "color": "bg-magenta" },
+    { "title": "Backend", "items": ["REST APIs", "Firebase Auth", "Real-time DB", "JSON"], "color": "bg-cyan" },
+    { "title": "Core Concepts", "items": ["DSA", "OOP", "DBMS", "OS", "System Design"], "color": "bg-black" },
+    { "title": "Databases", "items": ["MySQL", "Firebase"], "color": "bg-white" },
+    { "title": "Tools", "items": ["Pandas", "NumPy", "Matplotlib", "Git", "GitHub"], "color": "bg-neon" }
+  ],
+  "experience": [
+    {
+      "role": "Freelance Web Developer",
+      "duration": "2024–Present",
+      "points": [
+        "Developed and deployed responsive websites and web applications for academic and small-scale projects.",
+        "Integrated REST APIs and backend services for dynamic data handling and authentication.",
+        "Improved application performance and user experience through optimized frontend design."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "MargVerse AI",
+      "type": "Career Guidance Platform",
+      "tech": ["HTML", "CSS", "JavaScript", "Firebase", "REST APIs"],
+      "points": [
+        "Designed and deployed an AI-powered web application to assist 100+ students in exploring academic and career pathways.",
+        "Integrated Large Language Model API for real-time chatbot interaction and dynamic recommendations.",
+        "Implemented Firebase Authentication and real-time database for secure user management.",
+        "Built scalable backend architecture ensuring smooth data processing and API communication."
+      ],
+      "color": "bg-neon"
+    },
+    {
+      "name": "Smart Interview Bot",
+      "type": "Preparation Platform",
+      "tech": ["Python", "Firebase", "JavaScript", "REST APIs"],
+      "points": [
+        "Developed an AI-based mock interview platform generating domain-specific technical questions.",
+        "Implemented automated answer evaluation logic for performance tracking and feedback generation.",
+        "Designed structured backend database to store user responses and analyze improvement metrics."
+      ],
+      "color": "bg-magenta"
+    }
+  ],
+  "certifications": [
+    "Red Hat App Dev I: Java (2025)",
+    "Intro to Python – Red Hat (2025)",
+    "Generative AI – Infosys (2025)",
+    "AWS Cloud Training (2025)",
+    "SQL (Basics) – HackerRank",
+    "Java (Basics) – HackerRank"
+  ],
+  "leadership": {
+    "role": "Core Team Member",
+    "club": "PR Head, Literature Club – IILM",
+    "points": [
+      "Participated in Smart India Hackathon (SIH), 2025",
+      "Solved 200+ problems on LeetCode and HackerRank",
+      "Attended Generative AI workshop at IILM University"
+    ]
+  }
+}

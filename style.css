@@ -1,0 +1,455 @@
+:root {
+    /* Neubrutalism Color Palette */
+    --bg: #f4f0ea; /* Warm off-white */
+    --black: #111111;
+    --white: #ffffff;
+    --pink: #ffb3ba;
+    --blue: #bae1ff;
+    --yellow: #ffffba;
+    --green: #baffc9;
+    --purple: #e2cbff;
+    --orange: #ffdfba;
+    
+    /* Typography */
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    /* Neubrutalism structural variables */
+    --border: 3px solid var(--black);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --shadow: 6px 6px 0px var(--black);
+    --shadow-hover: 10px 10px 0px var(--black);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--black);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: var(--purple);
+    color: var(--black);
+}
+
+/* Utility Colors */
+.bg-white { background-color: var(--white); }
+.bg-pink { background-color: var(--pink); }
+.bg-blue { background-color: var(--blue); }
+.bg-yellow { background-color: var(--yellow); }
+.bg-green { background-color: var(--green); }
+.bg-purple { background-color: var(--purple); }
+.bg-orange { background-color: var(--orange); }
+
+/* Neubrutalism Components */
+.neo-box {
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px;
+    transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.neo-box-hover:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.neo-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    border: var(--border);
+    border-radius: 50px;
+    background-color: var(--white);
+    box-shadow: 3px 3px 0px var(--black);
+    text-transform: uppercase;
+}
+
+.neo-btn {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: 4px 4px 0px var(--black);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: var(--black);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.neo-btn:hover, .neo-btn.active {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--black);
+    background-color: var(--yellow);
+}
+
+.neo-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--black);
+}
+
+/* Layout */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
+}
+
+.nav-brand {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    background-color: var(--purple);
+    padding: 4px 16px;
+    border: var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: 3px 3px 0px var(--black);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Tab System */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease forwards;
+}
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--black);
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: var(--pink);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+/* Home Tab */
+.home-section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+@media (min-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 64px;
+    }
+}
+
+.hero-text h1 {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+}
+
+.hero-text .neo-badge {
+    background-color: var(--green);
+    font-size: 1.2rem;
+    margin-bottom: 32px;
+}
+
+.hero-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: var(--blue);
+    padding: 0;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 3px); /* Match container radius minus border */
+}
+
+/* About Tab */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+@media (min-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.summary-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+}
+@media (min-width: 600px) {
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    border-bottom: 3px solid var(--black);
+    padding-bottom: 8px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+/* Work Tab */
+.work-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.exp-card {
+    margin-bottom: 24px;
+}
+
+.exp-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+    .exp-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.exp-header h3 {
+    font-size: 2rem;
+}
+
+.bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.bullet-list li {
+    display: flex;
+    gap: 12px;
+}
+
+.bullet-icon {
+    font-weight: 900;
+    color: var(--black);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+@media (min-width: 992px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.proj-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.proj-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+}
+
+/* Extra Tab */
+.extra-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+@media (min-width: 992px) {
+    .extra-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.cert-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cert-list li {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 16px;
+    border: var(--border);
+    border-radius: var(--radius-sm);
+    background-color: var(--white);
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+/* Footer */
+.footer {
+    border-top: var(--border);
+    padding-top: 24px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        padding: 16px;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .nav-btn {
+        padding: 12px;
+    }
+
+    .neo-box {
+        padding: 24px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .hero-contact {
+        justify-content: center;
+    }
+
+    .skills-grid, .projects-grid, .about-grid {
+        gap: 24px;
+    }
+
+    .exp-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .proj-card h3 {
+        font-size: 1.8rem;
+    }
+}
