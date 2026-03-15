@@ -1,12 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('data.json')
-        .then(response => response.json())
+    // We use ./ to tell the browser to look in the CURRENT folder
+    fetch('./data.json') 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             renderApp(data);
         })
         .catch(error => console.error('Error loading data:', error));
 });
-
 // Global function for tab switching
 window.switchTab = function(tabId) {
     // Hide all tabs
